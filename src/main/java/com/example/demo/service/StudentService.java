@@ -19,4 +19,13 @@ public class StudentService {
     private void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    private Student updateStudentName(Long id, String name) {
+        Student student = studentRepository.findById(id);
+        if (student) {
+            student.setName(name);
+            studentRepository.save(student);
+            return student;
+        }
+    }
 }
