@@ -4,7 +4,7 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    private List<Studetn> getAllStudents() {
+    private List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
